@@ -2,7 +2,8 @@ package dbPhase.hypeerweb;
 
 public class HyPeerWeb {
 
-	public static HyPeerWeb getSingleton() {
+	public static HyPeerWeb getSingleton() 
+	{
 		
 	}
 	
