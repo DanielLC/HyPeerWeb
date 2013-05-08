@@ -50,6 +50,13 @@ public class Node {
 	 */
 	public Node(int id) {
 		this(new WebId(id));
+		
+		
+		//This seems silly but is required to pass phase 1
+		//For phase 2 we will want to call setFold every time we create a new node
+		fold = this;
+		
+		
 		/*this.id = new WebId(id);
 		neighbors = new HashSet<Node>();
 		upPointers = new HashSet<Node>();
