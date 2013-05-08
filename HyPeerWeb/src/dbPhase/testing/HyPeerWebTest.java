@@ -24,6 +24,8 @@ public class HyPeerWebTest
 	@Test
 	public void testAddRemoveNode() 
 	{
+		hyPeerWeb = HyPeerWeb.getSingleton();
+		
 		Node newNode = new Node(0);
 		
 		hyPeerWeb.addNode(newNode);
@@ -38,6 +40,7 @@ public class HyPeerWebTest
 	@Test
 	public void testClearNodes() 
 	{
+		hyPeerWeb = HyPeerWeb.getSingleton();
 		Node newNode1 = new Node(0);
 		Node newNode2 = new Node(1);
 		
@@ -53,9 +56,11 @@ public class HyPeerWebTest
 	@Test
 	public void testGetNode() 
 	{
+		hyPeerWeb = HyPeerWeb.getSingleton();
 		Node newNode = new Node(0);
 		
 		hyPeerWeb.addNode(newNode);
 		assertNotNull("Node asked for cannot be null.", hyPeerWeb.getNode(0));
+		assertSame("Test if node is the same.", newNode, hyPeerWeb.getNode(0));
 	}
 }
