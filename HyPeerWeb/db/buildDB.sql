@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS Nodes(webID integer, currentState integer, height integer);
+CREATE TABLE IF NOT EXISTS Connections(firstWebID integer, secondWebID integer, connType text, FOREIGN KEY (firstWebID) REFERENCES Nodes(webID), FOREIGN KEY (secondWebID) REFERENCES Nodes(webID));
